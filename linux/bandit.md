@@ -43,3 +43,17 @@ Apprendre les bases de la ligne de commande Linux à travers les niveaux du jeu 
 - Solution : `cat ./-file07`.
 
 **Ce que j'ai retenu** : `file` permet de connaître le contenu d'un fichier sans l'ouvrir, pratique pour éviter d'afficher du binaire.
+
+## Niveau 5 → 6
+
+**Objectif** : trouver un fichier lisible, de 1033 octets, non exécutable, parmi 20 dossiers.
+
+| Commande | Rôle |
+|----------|------|
+| `find . -type f -size 1033c ! -executable` | Chercher un fichier selon sa taille et ses droits |
+| `ls -la maybehere*` | Lister tout ce qui commence par « maybehere » |
+
+**Ce que j'ai retenu**
+- `find` évite de chercher à la main : une ligne au lieu de 200.
+- `-size 1033c` : le `c` signifie octets.
+- Droits `rwx` : r = lecture, w = écriture, x = exécution ; un `-` = droit absent.
